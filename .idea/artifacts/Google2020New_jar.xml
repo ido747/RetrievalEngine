@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Google2020New:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Google2020New_jar</output-path>
+    <root id="archive" name="Google2020New.jar">
+      <element id="module-output" name="Google2020New" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/medallia-word2vec-0.10.2-jar-with-dependencies.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

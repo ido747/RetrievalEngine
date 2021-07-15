@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="borderPane" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.MyViewController">
+   <top>
+      <VBox prefHeight="456.0" prefWidth="496.0" BorderPane.alignment="CENTER">
+         <children>
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="187.0" minWidth="10.0" prefWidth="78.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="187.0" minWidth="10.0" prefWidth="260.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="243.0" minWidth="10.0" prefWidth="106.0" />
+
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+
+
+
+              </rowConstraints>
+               <children>
+                  <Label text="corpus path:" />
+                  <Label text="posting files path:" GridPane.rowIndex="1" />
+                  <Label text="Stemming" GridPane.rowIndex="2" />
+                  <Button fx:id="resetButton" mnemonicParsing="false" onAction="#ResetDIctionary" text="Reset" GridPane.rowIndex="3" />
+                  <Button fx:id="showDictionaryButton" mnemonicParsing="false" onAction="#showDictionary" text="Show dictionary" GridPane.rowIndex="4" />
+                  <Button fx:id="loadDictionaryButton" mnemonicParsing="false" onAction="#loadDictionary" text="Load dictionary" GridPane.rowIndex="5" />
+                  <CheckBox fx:id="stemming" mnemonicParsing="false" onAction="#useStemming" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="pathCorpus" prefHeight="25.0" prefWidth="100.0" GridPane.columnIndex="1" />
+                  <TextField fx:id="pathPosting" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Button fx:id="pathButton" mnemonicParsing="false" onAction="#browseCorpus" text="Browse" GridPane.columnIndex="2" />
+                  <Button fx:id="postingpathButton" mnemonicParsing="false" onAction="#browsePosting" text="Browse" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Button fx:id="startButton" mnemonicParsing="false" onAction="#startIndexing" text="Start" GridPane.rowIndex="6" />
+                  <Label text="1 query option:" GridPane.rowIndex="7" />
+                  <Label text="choose query file option" GridPane.rowIndex="8" />
+                  <Label text="semantic treatment" GridPane.rowIndex="10" />
+                  <CheckBox fx:id="semantic" mnemonicParsing="false" onAction="#semanticTreatment" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                  <TextField fx:id="queryoption1" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                  <TextField fx:id="queryoption2" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                  <Button fx:id="runButton" mnemonicParsing="false" onAction="#runQuery" text="Run" GridPane.rowIndex="9" />
+                  <Button fx:id="browseFile" mnemonicParsing="false" onAction="#browseQueryFile" text="Browse" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+                  <ComboBox fx:id="comboChooseDoc" onAction="#chooseDocNo" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+                  <Label text="choose identities" GridPane.rowIndex="11" />
+                  <Button fx:id="showTop5entities" mnemonicParsing="false" onAction="#showTop5entites" text="show top 5 entities" GridPane.columnIndex="2" GridPane.rowIndex="11" />
+
+               </children>
+            </GridPane>
+         </children></VBox>
+   </top>
+</BorderPane>
